@@ -1,0 +1,45 @@
+# В репозитории храним только служебное ядро фабрики; папки проектов
+# (pptx + исходники + рендеры) не версионируются: в корне всё игнорируем,
+# кроме whitelist ниже.
+/*
+!/_service/
+!/.opencode/
+!/.claude/
+!/.clinerules/
+!/.gitignore
+!/AGENTS.md
+!/CLAUDE.md
+!/README.md
+# демо-проект (быстрая проверка из README)
+!/Пример_Солнечная_система/
+
+# Служебное: junction-ссылки на скилл (создаются на каждой машине, см. AGENTS.md)
+.opencode/skills/
+.claude/skills/
+
+# Harness-папки локальных инструментов
+/.qoder/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Рендеры-превью и монтажки (генерируются deck.py render/thumb, не нужны в репозитории)
+**/_build/render/
+**/_build/grid.png
+*_grid.png
+smoke*.pptx
+
+# Временные файлы Office
+~$*
+
+# Временные/системные файлы Windows
+Thumbs.db
+desktop.ini
+*.tmp
+
+# Локальные настройки редакторов/ИИ-харнессов
+.vscode/
+.idea/

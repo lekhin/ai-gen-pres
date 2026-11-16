@@ -1,0 +1,24 @@
+{
+  "name": "dark",
+  "title": "Дарк",
+  "description": "Тёмная акцентная тема: почти-чёрный фон, светлый текст, янтарный акцент. Питчи, защита проектов, технические доклады, вечерние выступления.",
+  "slide": { "w_cm": 33.866667, "h_cm": 19.05 },
+  "grid": { "margin_cm": 1.5, "cols": 6, "content_top_cm": 5.6, "footer_top_cm": 17.55 },
+  "palette": {
+    "accent": "F59E0B",
+    "ink": "F1F5F9",
+    "paper": "0F172A",
+    "line": "334155",
+    "muted": "94A3B8",
+    "good": "34D399",
+    "bad": "FB7185",
+    "nav": ["38BDF8", "A78BFA", "34D399", "FB7185"]
+  },
+  "fonts": { "head": "Inter", "body": "Inter" },
+  "layouts": { "title": "Титул", "content": "Контент", "image": "Контент с рисунком" },
+  "header": true,
+  "title_case": false,
+  "dark_slide": { "background": "0B1120", "text": "F8FAFC", "line": "1E293B" },
+  "logo": null,
+  "qa_fonts": ["Inter"]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "book",
+  "title": "Книга",
+  "description": "Портретный A4 «учебник/научное издание»: строгая вёрстка книжной полосы, белый фон, глубокий синий, заголовки с засечками. Приложение к книге, глава учебника, методичка.",
+  "slide": { "w_cm": 21.0, "h_cm": 29.7 },
+  "grid": { "margin_cm": 2.0, "cols": 6, "content_top_cm": 5.4, "footer_top_cm": 27.5,
+            "title_pt": 20, "body_pt": 12, "cover_pt": 30, "cover_sub_pt": 14 },
+  "palette": {
+    "accent": "1D3557",
+    "ink": "1A1A1A",
+    "paper": "FFFFFF",
+    "line": "D6D3D1",
+    "muted": "57534E",
+    "good": "3A5A40",
+    "bad": "9D2235",
+    "nav": ["2A6F97", "588157", "BC6C25", "7B2CBF"],
+    "accent_mid": "2A6F97",
+    "accent_tint": "7B93AD",
+    "accent_soft": "E7EDF4",
+    "fill_soft": "F5F3F0"
+  },
+  "fonts": { "head": "Georgia", "body": "Inter" },
+  "layouts": { "title": "Титул", "content": "Контент", "image": "Контент с рисунком" },
+  "header": true,
+  "title_case": false,
+  "dark_slide": { "background": "1D3557", "text": "F8FAFC", "line": "33415C" },
+  "logo": null,
+  "qa_fonts": ["Georgia", "Inter", "Times New Roman"]
+}

@@ -1,0 +1,24 @@
+%% Схема подключений сервисов (источник содержания для mmd2diagram.py).
+%% Формы: ([..])pill  [(..)]БД  {..}ромб; :::people/:::data/:::model — роли
+%% палитры; subgraph — периметры. Цветов в mermaid нет — окраску даёт роль.
+flowchart LR
+    users(["Сотрудники отдела<br>браузер"]):::people
+    subgraph dmz["ДМЗ · внешний периметр"]
+        nginx["Nginx<br>reverse proxy, TLS"]
+    end
+    subgraph core["Внутренний контур · docker compose"]
+        api["FastAPI<br>бэкенд сервисов"]
+        worker["Worker<br>очереди задач"]
+        pg[("Postgres<br>данные сервисов")]
+        minio[("MinIO<br>файлы")]
+    end
+    sso["Keycloak SSO<br>Keycloak + Active Directory"]
+    llm["LLM-эндпоинт<br>OpenAI-совместимый"]:::model
+    users -->|HTTPS| nginx
+    nginx --> api
+    api --> pg
+    api --> minio
+    api -->|задания| worker
+    worker --> pg
+    api -.->|OIDC| sso
+    api -.->|OpenAI API| llm
